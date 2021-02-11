@@ -16,7 +16,7 @@ function sum(a, b) {
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+testSum();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -30,13 +30,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  let output = a * b;
+  let output = a * b ;
   return[output,`The product of ${a} and ${b} is ${output}.`]
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -54,12 +54,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  
+  let AandB = sum(a, b)[0];
+  let Addc = sum(c,0)[0];
+  let Addresult = sum(AandB,Addc)[0];
+  // console.log(Addresult);
+  let Product1 = multiply(a,b)[0];
+  let Product2 = multiply(c,1)[0];
+  let ProdResult = multiply(Product1 , Product2)[0];
+  // console.log(ProdResult);
+  let resultOfsumAndmultiply = [Addresult,ProdResult,a + " and " + b + " and " + c + " sum to " + Addresult + ".","The product of " + a + " and " + b + " and " + c + " is " + ProdResult + "."];
+  // console.log(resultOfsumAndmultiply);
+  return resultOfsumAndmultiply;
  
 }
 
+// sumAndMultiply(4,7,5);
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
