@@ -88,12 +88,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2,3,4]; //eslint-disable-line
 
+
 function sumArray(sumArr) {
+  let output = 0;
   //eslint-disable-line
-  let sum1st = sum(sumArr[0],sumArr[1])[0];
-  let sumHere = sum(sum1st,sumArr[2])[0];
-  let stringHere = `${sumArr} was passed in as an array of numbers, and ${sumHere} is their sum.` ; 
-  let ArrResult = [sumHere,stringHere];
+  for (let i=0;i<sumArr.length;i++) {
+    output = sum(output,sumArr[i])[0];
+
+  }
+
+  let stringHere = `${sumArr} was passed in as an array of numbers, and ${output} is their sum.` ; 
+  let ArrResult = [output,stringHere];
   return ArrResult;
 }
 
